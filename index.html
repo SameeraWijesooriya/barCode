@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bar-code</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div id="body">
+    <h1>Barcode Maker</h1>
+    <p>Enter your barcode Data: 
+        <input type="text" id="txt_input"> 
+        <button id="btn_genarate" style="color:red" onclick='document.getElementById("body").style.display="none"'>Submit</button>
+    </p>
+    </div>
+    <svg id="barcode"></svg>
+   
+   
+    <script >
+        document.getElementById("btn_genarate").addEventListener('click',function()
+           {var val=document.getElementById("txt_input").value;
+            JsBarcode("#barcode", val);
+
+             })
+        
+    </script>
+</body>
+</html>
